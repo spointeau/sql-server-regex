@@ -1,6 +1,9 @@
 use Scratch
 go
 
+drop function dbo.RegexIsMatch
+go
+
 drop function dbo.RegexMatch
 go
 
@@ -11,6 +14,11 @@ drop function dbo.RegexReplace
 go
 
 -- see https://msdn.microsoft.com/en-us/library/ms186755.aspx for details
+
+CREATE FUNCTION dbo.RegexIsMatch (@input nvarchar(max), @pattern nvarchar(max))
+RETURNS bit
+AS EXTERNAL NAME [RegexAssembly].[UDF].[IsMatch]
+go
 
 CREATE FUNCTION dbo.RegexMatch (@input nvarchar(max), @pattern nvarchar(max))
 RETURNS nvarchar(max)

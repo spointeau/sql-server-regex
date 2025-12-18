@@ -6,6 +6,10 @@ SQL-Server-Regex gives you the power to run regular expressions inside SQL Serve
 
 # Examples
 
+### IsMatch
+
+The [RegexIsMatch()](/examples/is-match.md) scalar function evaluates a regular expression against a string and returns 1 when a match is found, or 0 otherwise.
+
 ### Match
 
 The [RegexMatch()](/examples/match.md) scalar function lets you call a regular expression against a string, and returns the first result if there is a match.
